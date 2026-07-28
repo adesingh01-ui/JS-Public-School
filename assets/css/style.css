@@ -1,0 +1,1917 @@
+/* ===========================================================
+   J S PUBLIC SCHOOL
+   Premium Theme
+   Author : ChatGPT
+=========================================================== */
+
+/* ===========================
+   Google Fonts
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap');
+
+
+/* ===========================
+   Root Variables
+=========================== */
+
+:root{
+
+--primary:#0B3D91;
+--secondary:#F4B400;
+--dark:#0f172a;
+--light:#ffffff;
+--gray:#64748b;
+--bg:#f8fafc;
+
+--shadow:0 10px 30px rgba(0,0,0,.08);
+
+--radius:18px;
+
+--transition:.35s ease;
+
+--container:1200px;
+
+}
+
+
+/* ===========================
+   Reset
+=========================== */
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:var(--bg);
+
+color:#222;
+
+overflow-x:hidden;
+
+line-height:1.7;
+
+}
+
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+ul{
+
+list-style:none;
+
+}
+
+
+/* ===========================
+Container
+=========================== */
+
+.container{
+
+width:min(92%,var(--container));
+
+margin:auto;
+
+}
+
+.section{
+
+padding:90px 0;
+
+}
+
+
+/* ===========================
+Typography
+=========================== */
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:60px;
+
+}
+
+.section-title span{
+
+color:var(--secondary);
+
+font-weight:700;
+
+letter-spacing:2px;
+
+font-size:.95rem;
+
+text-transform:uppercase;
+
+}
+
+.section-title h2{
+
+font-size:2.6rem;
+
+margin:15px 0;
+
+font-family:'Playfair Display',serif;
+
+color:var(--primary);
+
+}
+
+.section-title p{
+
+max-width:720px;
+
+margin:auto;
+
+color:var(--gray);
+
+}
+
+
+/* ===========================
+Buttons
+=========================== */
+
+.btn-primary{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:14px 32px;
+
+background:var(--secondary);
+
+color:#fff;
+
+border-radius:50px;
+
+font-weight:600;
+
+transition:var(--transition);
+
+box-shadow:var(--shadow);
+
+}
+
+.btn-primary:hover{
+
+background:#d99b00;
+
+transform:translateY(-4px);
+
+}
+
+.btn-secondary{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:14px 32px;
+
+background:#fff;
+
+border:2px solid #fff;
+
+border-radius:50px;
+
+font-weight:600;
+
+color:var(--primary);
+
+transition:var(--transition);
+
+}
+
+.btn-secondary:hover{
+
+background:transparent;
+
+color:#fff;
+
+}
+
+
+/* ===========================
+Top Bar
+=========================== */
+
+.top-bar{
+
+background:var(--primary);
+
+color:#fff;
+
+padding:10px 0;
+
+font-size:.9rem;
+
+}
+
+.top-bar .container{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+flex-wrap:wrap;
+
+}
+
+.top-left{
+
+display:flex;
+
+gap:30px;
+
+flex-wrap:wrap;
+
+}
+
+.top-left span{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+}
+
+.top-right{
+
+font-weight:600;
+
+color:#FFD95A;
+
+}
+
+
+/* ===========================
+Header
+=========================== */
+
+.header{
+
+position:sticky;
+
+top:0;
+
+z-index:999;
+
+background:rgba(255,255,255,.95);
+
+backdrop-filter:blur(12px);
+
+box-shadow:0 3px 15px rgba(0,0,0,.05);
+
+}
+
+.nav-wrapper{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+height:90px;
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.logo img{
+
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+.logo h2{
+
+font-size:1.4rem;
+
+color:var(--primary);
+
+font-weight:700;
+
+}
+
+.logo p{
+
+font-size:.82rem;
+
+color:var(--gray);
+
+}
+
+.nav-links{
+
+display:flex;
+
+gap:28px;
+
+}
+
+.nav-links a{
+
+font-weight:600;
+
+position:relative;
+
+transition:.3s;
+
+}
+
+.nav-links a:hover,
+
+.nav-links a.active{
+
+color:var(--primary);
+
+}
+
+.nav-links a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-8px;
+
+width:0;
+
+height:3px;
+
+background:var(--secondary);
+
+transition:.35s;
+
+}
+
+.nav-links a:hover::after,
+
+.nav-links a.active::after{
+
+width:100%;
+
+}
+
+.btn-admission{
+
+padding:12px 28px;
+
+background:var(--primary);
+
+color:#fff;
+
+border-radius:50px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn-admission:hover{
+
+background:var(--secondary);
+
+}
+
+
+/* ===========================
+Hero
+=========================== */
+
+.hero{
+
+position:relative;
+
+height:92vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+overflow:hidden;
+
+}
+
+.hero-image{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+}
+
+.hero-overlay{
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(
+rgba(6,33,78,.78),
+rgba(6,33,78,.65));
+
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:5;
+
+color:#fff;
+
+text-align:center;
+
+max-width:850px;
+
+}
+
+.hero-badge{
+
+display:inline-block;
+
+padding:10px 24px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(12px);
+
+border-radius:40px;
+
+margin-bottom:30px;
+
+font-weight:600;
+
+}
+
+.hero h4{
+
+font-size:1.2rem;
+
+font-weight:500;
+
+margin-bottom:10px;
+
+}
+
+.hero h1{
+
+font-size:4.2rem;
+
+font-family:'Playfair Display',serif;
+
+margin-bottom:20px;
+
+line-height:1.1;
+
+}
+
+.hero h3{
+
+font-size:1.6rem;
+
+font-weight:500;
+
+margin-bottom:25px;
+
+}
+
+.hero p{
+
+font-size:1.05rem;
+
+max-width:700px;
+
+margin:auto;
+
+opacity:.95;
+
+}
+
+.hero-buttons{
+
+margin-top:40px;
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.hero-scroll{
+
+position:absolute;
+
+bottom:30px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:1.6rem;
+
+color:#fff;
+
+animation:float 1.8s infinite;
+
+}
+
+@keyframes float{
+
+0%{transform:translate(-50%,0);}
+
+50%{transform:translate(-50%,10px);}
+
+100%{transform:translate(-50%,0);}
+
+}
+
+/* ===========================================================
+   WELCOME SECTION
+=========================================================== */
+
+.welcome-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+.welcome-image{
+
+overflow:hidden;
+
+border-radius:var(--radius);
+
+box-shadow:var(--shadow);
+
+}
+
+.welcome-image img{
+
+width:100%;
+
+height:520px;
+
+object-fit:cover;
+
+transition:.6s;
+
+}
+
+.welcome-image:hover img{
+
+transform:scale(1.08);
+
+}
+
+.welcome-content h3{
+
+font-size:2.2rem;
+
+color:var(--primary);
+
+margin-bottom:20px;
+
+font-family:'Playfair Display',serif;
+
+}
+
+.welcome-content p{
+
+color:var(--gray);
+
+margin-bottom:20px;
+
+font-size:1rem;
+
+}
+
+.welcome-features{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:18px;
+
+margin-top:35px;
+
+}
+
+.welcome-features div{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+padding:15px 20px;
+
+background:#fff;
+
+border-radius:14px;
+
+box-shadow:var(--shadow);
+
+transition:.3s;
+
+font-weight:500;
+
+}
+
+.welcome-features div:hover{
+
+transform:translateY(-6px);
+
+}
+
+.welcome-features i{
+
+color:var(--secondary);
+
+font-size:1.2rem;
+
+}
+
+
+
+/* ===========================================================
+   WHY CHOOSE US
+=========================================================== */
+
+.why-us{
+
+background:#fff;
+
+}
+
+.why-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+.why-card{
+
+background:#fff;
+
+padding:40px 30px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:var(--shadow);
+
+transition:.4s;
+
+border-top:5px solid transparent;
+
+}
+
+.why-card:hover{
+
+transform:translateY(-12px);
+
+border-color:var(--secondary);
+
+}
+
+.why-card i{
+
+width:85px;
+
+height:85px;
+
+background:linear-gradient(135deg,var(--primary),#205ecf);
+
+color:#fff;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+margin:auto;
+
+border-radius:50%;
+
+font-size:2rem;
+
+margin-bottom:25px;
+
+}
+
+.why-card h3{
+
+color:var(--primary);
+
+margin-bottom:15px;
+
+font-size:1.35rem;
+
+}
+
+.why-card p{
+
+color:var(--gray);
+
+font-size:.95rem;
+
+}
+
+
+
+/* ===========================================================
+   SCHOOL STATISTICS
+=========================================================== */
+
+.statistics{
+
+background:linear-gradient(135deg,#0B3D91,#174fa8);
+
+color:#fff;
+
+}
+
+.stats-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:30px;
+
+}
+
+.stat-card{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+border-radius:20px;
+
+padding:40px 25px;
+
+text-align:center;
+
+transition:.35s;
+
+border:1px solid rgba(255,255,255,.15);
+
+}
+
+.stat-card:hover{
+
+transform:translateY(-10px);
+
+background:rgba(255,255,255,.14);
+
+}
+
+.stat-card h2{
+
+font-size:3rem;
+
+font-weight:800;
+
+color:#FFD95A;
+
+margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+font-size:1rem;
+
+font-weight:500;
+
+opacity:.95;
+
+}
+
+
+
+/* ===========================================================
+   COMMON CARD EFFECT
+=========================================================== */
+
+.card-hover{
+
+transition:.35s;
+
+}
+
+.card-hover:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+
+/* ===========================================================
+   SECTION BACKGROUND HELPERS
+=========================================================== */
+
+.bg-light{
+
+background:#fff;
+
+}
+
+.bg-primary{
+
+background:var(--primary);
+
+color:#fff;
+
+}
+
+.bg-gray{
+
+background:#f5f7fb;
+
+}
+
+
+
+/* ===========================================================
+   SECTION DIVIDER
+=========================================================== */
+
+.section-divider{
+
+width:90px;
+
+height:4px;
+
+background:var(--secondary);
+
+margin:18px auto 0;
+
+border-radius:50px;
+
+}
+
+
+
+/* ===========================================================
+   IMAGE HOVER EFFECT
+=========================================================== */
+
+.image-hover{
+
+overflow:hidden;
+
+border-radius:18px;
+
+}
+
+.image-hover img{
+
+transition:.6s;
+
+}
+
+.image-hover:hover img{
+
+transform:scale(1.08);
+
+}
+
+
+
+/* ===========================================================
+   FADE UP ANIMATION
+=========================================================== */
+
+.fade-up{
+
+animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================================================
+   LEADERSHIP SECTION
+=========================================================== */
+
+.leadership{
+
+background:#fff;
+
+}
+
+.leadership-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:35px;
+
+}
+
+.leader-card{
+
+background:#fff;
+
+border-radius:22px;
+
+padding:35px 25px;
+
+text-align:center;
+
+box-shadow:var(--shadow);
+
+transition:.4s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.leader-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:6px;
+
+background:linear-gradient(90deg,var(--primary),var(--secondary));
+
+}
+
+.leader-card:hover{
+
+transform:translateY(-12px);
+
+}
+
+.leader-card img{
+
+width:170px;
+
+height:170px;
+
+margin:auto;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:6px solid #fff;
+
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+margin-bottom:25px;
+
+}
+
+.leader-card h3{
+
+font-size:1.35rem;
+
+color:var(--primary);
+
+margin-bottom:8px;
+
+}
+
+.leader-card span{
+
+display:inline-block;
+
+background:var(--secondary);
+
+color:#fff;
+
+padding:7px 18px;
+
+border-radius:30px;
+
+font-size:.9rem;
+
+font-weight:600;
+
+margin-bottom:18px;
+
+}
+
+.leader-card p{
+
+font-size:.95rem;
+
+color:var(--gray);
+
+font-style:italic;
+
+line-height:1.8;
+
+}
+
+
+/* ===========================================================
+   FACILITIES
+=========================================================== */
+
+.facilities{
+
+background:#f8fafc;
+
+}
+
+.facility-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+
+}
+
+.facility-card{
+
+background:#fff;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:var(--shadow);
+
+transition:.4s;
+
+}
+
+.facility-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.facility-card img{
+
+width:100%;
+
+height:240px;
+
+object-fit:cover;
+
+transition:.6s;
+
+}
+
+.facility-card:hover img{
+
+transform:scale(1.08);
+
+}
+
+.facility-card h3{
+
+padding:24px;
+
+text-align:center;
+
+font-size:1.25rem;
+
+color:var(--primary);
+
+font-weight:700;
+
+}
+
+
+/* ===========================================================
+   GALLERY PREVIEW
+=========================================================== */
+
+.gallery-preview{
+
+background:#fff;
+
+}
+
+.gallery-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:18px;
+
+margin-top:45px;
+
+}
+
+.gallery-grid img{
+
+width:100%;
+
+height:260px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+cursor:pointer;
+
+transition:.45s;
+
+box-shadow:var(--shadow);
+
+}
+
+.gallery-grid img:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 18px 40px rgba(0,0,0,.18);
+
+}
+
+.gallery-button{
+
+text-align:center;
+
+margin-top:45px;
+
+}
+
+
+/* ===========================================================
+   ADMISSION CTA
+=========================================================== */
+
+.admission-banner{
+
+padding:90px 0;
+
+background:linear-gradient(135deg,var(--primary),#1c58b6);
+
+color:#fff;
+
+}
+
+.admission-banner .container{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:40px;
+
+flex-wrap:wrap;
+
+}
+
+.cta-content h2{
+
+font-size:2.5rem;
+
+font-family:'Playfair Display',serif;
+
+margin-bottom:18px;
+
+}
+
+.cta-content p{
+
+font-size:1.05rem;
+
+opacity:.95;
+
+max-width:650px;
+
+}
+
+.cta-buttons{
+
+display:flex;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+}
+
+.cta-buttons .btn-primary{
+
+background:#FFD95A;
+
+color:#222;
+
+font-weight:700;
+
+}
+
+.cta-buttons .btn-primary:hover{
+
+background:#fff;
+
+}
+
+.cta-buttons .btn-secondary{
+
+border:2px solid #fff;
+
+color:#fff;
+
+background:transparent;
+
+}
+
+.cta-buttons .btn-secondary:hover{
+
+background:#fff;
+
+color:var(--primary);
+
+}
+
+
+/* ===========================================================
+   IMAGE BORDER EFFECT
+=========================================================== */
+
+.facility-card img,
+.gallery-grid img,
+.welcome-image img{
+
+border-radius:18px;
+
+}
+/* ===========================================================
+   CONTACT STRIP
+=========================================================== */
+
+.contact-strip{
+
+padding:70px 0;
+
+background:#ffffff;
+
+border-top:1px solid #eee;
+
+}
+
+.contact-strip-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+text-align:center;
+
+}
+
+.contact-strip-grid>div{
+
+background:#fff;
+
+padding:35px 30px;
+
+border-radius:20px;
+
+box-shadow:var(--shadow);
+
+transition:.35s;
+
+}
+
+.contact-strip-grid>div:hover{
+
+transform:translateY(-8px);
+
+}
+
+.contact-strip-grid i{
+
+font-size:2.2rem;
+
+color:var(--secondary);
+
+margin-bottom:20px;
+
+}
+
+.contact-strip-grid h4{
+
+font-size:1.35rem;
+
+margin-bottom:15px;
+
+color:var(--primary);
+
+}
+
+.contact-strip-grid p{
+
+color:var(--gray);
+
+line-height:1.8;
+
+}
+
+
+
+/* ===========================================================
+   FOOTER
+=========================================================== */
+
+.footer{
+
+background:#071b3a;
+
+color:#fff;
+
+padding-top:70px;
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr 1fr;
+
+gap:45px;
+
+padding-bottom:50px;
+
+}
+
+.footer-about img{
+
+width:80px;
+
+margin-bottom:20px;
+
+border-radius:50%;
+
+background:#fff;
+
+padding:8px;
+
+}
+
+.footer h3{
+
+margin-bottom:15px;
+
+font-size:1.6rem;
+
+}
+
+.footer h4{
+
+margin-bottom:22px;
+
+color:#FFD95A;
+
+font-size:1.15rem;
+
+}
+
+.footer p{
+
+color:#d8d8d8;
+
+line-height:1.8;
+
+}
+
+.footer ul li{
+
+margin-bottom:12px;
+
+}
+
+.footer ul li a{
+
+color:#ddd;
+
+transition:.3s;
+
+}
+
+.footer ul li a:hover{
+
+color:#FFD95A;
+
+padding-left:6px;
+
+}
+
+.social-links{
+
+display:flex;
+
+gap:15px;
+
+margin-top:15px;
+
+}
+
+.social-links a{
+
+width:45px;
+
+height:45px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:rgba(255,255,255,.08);
+
+border-radius:50%;
+
+transition:.35s;
+
+font-size:18px;
+
+}
+
+.social-links a:hover{
+
+background:var(--secondary);
+
+transform:translateY(-5px);
+
+}
+
+.footer-bottom{
+
+border-top:1px solid rgba(255,255,255,.1);
+
+text-align:center;
+
+padding:25px 0;
+
+color:#bbb;
+
+}
+
+
+
+/* ===========================================================
+   FLOATING BUTTONS
+=========================================================== */
+
+.floating-whatsapp,
+
+.floating-call,
+
+#scrollTop{
+
+position:fixed;
+
+right:25px;
+
+width:60px;
+
+height:60px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:24px;
+
+color:#fff;
+
+box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+cursor:pointer;
+
+z-index:999;
+
+transition:.35s;
+
+}
+
+.floating-whatsapp{
+
+bottom:150px;
+
+background:#25D366;
+
+}
+
+.floating-call{
+
+bottom:80px;
+
+background:var(--primary);
+
+}
+
+#scrollTop{
+
+bottom:10px;
+
+background:var(--secondary);
+
+border:none;
+
+}
+
+.floating-whatsapp:hover,
+
+.floating-call:hover,
+
+#scrollTop:hover{
+
+transform:scale(1.1);
+
+}
+
+
+
+/* ===========================================================
+   SCROLLBAR
+=========================================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#edf2f7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--primary);
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#072c6d;
+
+}
+
+
+
+/* ===========================================================
+   RESPONSIVE
+=========================================================== */
+
+@media(max-width:1100px){
+
+.hero h1{
+
+font-size:3.3rem;
+
+}
+
+.footer-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.stats-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.contact-strip-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+
+@media(max-width:900px){
+
+.nav-links{
+
+display:none;
+
+}
+
+.btn-admission{
+
+display:none;
+
+}
+
+.welcome-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.gallery-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.admission-banner .container{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.facility-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+
+@media(max-width:768px){
+
+.hero{
+
+height:85vh;
+
+}
+
+.hero h1{
+
+font-size:2.6rem;
+
+}
+
+.hero h3{
+
+font-size:1.2rem;
+
+}
+
+.hero p{
+
+font-size:.95rem;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+.section{
+
+padding:70px 0;
+
+}
+
+.section-title h2{
+
+font-size:2rem;
+
+}
+
+.stats-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.gallery-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.social-links{
+
+justify-content:center;
+
+}
+
+.logo img{
+
+width:55px;
+
+height:55px;
+
+}
+
+.logo h2{
+
+font-size:1.1rem;
+
+}
+
+.logo p{
+
+display:none;
+
+}
+
+}
+
+
+
+@media(max-width:500px){
+
+.top-bar{
+
+display:none;
+
+}
+
+.hero h1{
+
+font-size:2.2rem;
+
+}
+
+.hero h3{
+
+font-size:1rem;
+
+}
+
+.hero-badge{
+
+font-size:.85rem;
+
+}
+
+.btn-primary,
+
+.btn-secondary{
+
+width:100%;
+
+}
+
+.floating-whatsapp,
+
+.floating-call,
+
+#scrollTop{
+
+width:52px;
+
+height:52px;
+
+font-size:20px;
+
+right:15px;
+
+}
+
+}
+
+
+
+/* ===========================================================
+   END OF FILE
+=========================================================== */

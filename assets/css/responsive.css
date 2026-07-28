@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Responsive Adaptations across Desktop, Tablet, and Mobile
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .nav-menu { gap: 1rem; }
+  .section-title h2 { font-size: 2.1rem; }
+  .page-header h1 { font-size: 2.4rem; }
+}
+
+@media (max-width: 768px) {
+  .top-bar-flex { flex-direction: column; gap: 0.5rem; text-align: center; }
+  .mobile-toggle { display: block; }
+  
+  .nav-menu {
+    position: fixed;
+    top: 75px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 75px);
+    background: var(--primary-dark);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 3rem 1.5rem;
+    gap: 1.5rem;
+    transition: var(--transition);
+  }
+
+  .nav-menu.active { left: 0; }
+  .section-padding { padding: 4rem 0; }
+  .hero-title { font-size: 2.2rem !important; }
+  .floating-btn-container { bottom: 1rem; right: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .brand-text h1 { font-size: 1.1rem; }
+  .brand-text span { font-size: 0.65rem; }
+  .btn { width: 100%; justify-content: center; }
+}
