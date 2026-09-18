@@ -1915,3 +1915,64 @@ right:15px;
 /* ===========================================================
    END OF FILE
 =========================================================== */
+
+/* ===========================================================
+   DISCLOSURE PAGE STYLES
+=========================================================== */
+
+.disclosure-table-wrapper {
+    background: #ffffff;
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    overflow-x: auto;
+}
+
+.disclosure-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.disclosure-table th, 
+.disclosure-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.disclosure-table th {
+    background-color: var(--primary);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.disclosure-table tr:hover {
+    background-color: #f8fafc;
+}
+
+.doc-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: var(--primary);
+    color: #ffffff;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.doc-link i {
+    color: var(--secondary);
+}
+
+.doc-link:hover {
+    background-color: var(--secondary);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.doc-link:hover i {
+    color: #ffffff;
+}

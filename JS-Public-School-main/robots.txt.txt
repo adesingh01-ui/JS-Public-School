@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /assets/js/
-Disallow: /assets/css/
-
-Sitemap: https://jspublicschool.edu.in/sitemap.xml
